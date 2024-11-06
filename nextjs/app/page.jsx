@@ -404,12 +404,12 @@ export default function Home() {
                       Generating formatted text...
                     </span>
                   ) : (
-                    formattedAnswer?.output.split("\n\n").map((paragraph, index)=> {
+                    formattedAnswer?.output.split("\n\n").map((paragraph, index) => {
                       return (
-                        <p className="" key={index}>
-                        {paragraph}
-                        </p>
-                      )
+                        <div className="text-justify mb-8" key={index}>
+                          <p>{paragraph}</p>
+                        </div>
+                      );
                     })
                   )}
                 </div>
